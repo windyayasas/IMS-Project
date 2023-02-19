@@ -1,1 +1,43 @@
-<p>student works!</p>
+<p>Student</p>
+
+ <!-- nav tabs -->
+ <div class="d-flex justify-content-start align-items-center">
+    <ul
+      class="nav-pills h-100"
+      ngbNav
+      [(activeId)]="activeId"
+      (navChange)="beforeTabChange($event)"
+    >
+      <li
+        *ngFor="let tab of tabList"
+        [ngbNavItem]="tab.type"
+        class="{{ getActive(tab.type) }}"
+      >
+        <a ngbNavLink class="h-100 d-flex align-items-center">
+          <span> {{  tab.title }}</span>
+        </a>
+        <ng-template ngbNavContent>
+          <!-- TAB CONTENT HERE -->
+          <app-achievements *ngIf="this.activeId === this.studentTabTypes.ACHIEVEMENT">
+          </app-achievements>
+
+          <app-marks
+            *ngIf="this.activeId === this.studentTabTypes.MARK"
+          >
+          </app-marks>
+
+          <app-my-attendance
+            *ngIf="this.activeId === this.studentTabTypes.ATTENDANCE"
+          >
+          </app-my-attendance>
+        </ng-template>
+      </li>
+    </ul>
+  </div>
+
+  <div class="settings-content">
+    <router-outlet></router-outlet>
+  </div>
+
+
+
