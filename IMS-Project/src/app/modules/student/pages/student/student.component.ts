@@ -11,7 +11,7 @@ import { StudentTab } from 'src/app/shared/models/student';
 })
 export class StudentComponent {
 
-  activeId = StudentTabTypes.ACHIEVEMENT;
+  activeId = StudentTabTypes.MYPROFILE;
   activeTab?: StudentTab;
   readonly studentTabTypes: typeof StudentTabTypes = StudentTabTypes
   tabList: StudentTab[] = [
@@ -37,6 +37,14 @@ export class StudentComponent {
       active: false,
       type: StudentTabTypes.ATTENDANCE,
       routeTitle: 'attendance'
+
+    },
+    {
+      id: 4,
+      title: 'My Profile',
+      active: false,
+      type: StudentTabTypes.MYPROFILE,
+      routeTitle: 'my-profile'
 
     }
   ];

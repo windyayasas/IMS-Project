@@ -30,6 +30,11 @@
             *ngIf="this.activeId === this.studentTabTypes.ATTENDANCE"
           >
           </app-my-attendance>
+
+          <app-my-profile
+            *ngIf="this.activeId === this.studentTabTypes.MYPROFILE"
+          >
+          </app-my-profile>
         </ng-template>
       </li>
     </ul>
