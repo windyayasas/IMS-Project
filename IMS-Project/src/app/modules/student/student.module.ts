@@ -8,6 +8,7 @@ import { MarksComponent } from './components/marks/marks.component';
 import { MyAttendanceComponent } from './components/my-attendance/my-attendance.component';
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { MyProfileComponent } from './components/my-profile/my-profile.component';
+import { PrizeGivingComponent } from './components/prize-giving/prize-giving.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MyProfileComponent } from './components/my-profile/my-profile.component
     StudentComponent,
     MarksComponent,
     MyAttendanceComponent,
-    MyProfileComponent
+    MyProfileComponent,
+    PrizeGivingComponent
   ],
   imports: [
     CommonModule,

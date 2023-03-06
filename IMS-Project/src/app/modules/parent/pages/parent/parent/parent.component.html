@@ -1,5 +1,4 @@
-
- <div class="d-flex student">
+<div class="d-flex Parent">
     <ul
       class="nav-pills h-100"
       ngbNav
@@ -11,7 +10,7 @@
         [ngbNavItem]="tab.type"
         class="{{ getActive(tab.type) }}"
       >
-        <a ngbNavLink class="h-100 d-flex Student">
+        <a ngbNavLink class="h-100 d-flex Parent">
          
         </a>
         <ng-template ngbNavContent>
@@ -43,19 +42,19 @@
   </div>
 
   <header>
-    student
+  Parent
 </header>
 <img src="C:\Users\Indumini Kavinda\Documents\projects\Student-Management\src\assets" class="rounded float-right">
 <div class="text-center">
-<button type="button" class="btn btn-primary">My Profile</button>
-<button type="button" class="btn btn-secondary">My Attendance</button>
+<button type="button" class="btn btn-primary">Profile</button>
+<button type="button" class="btn btn-secondary">Attendance</button>
 <button type="button" class="btn btn-success">Marks</button>
 <button type="button" class="btn btn-danger">Achievements</button>
 <button type="button" class="btn btn-warning">Prize Giving</button>
 
 </div>
 <div class="text-center">
-    LOGGED-IN AS A STUDENT!
+    LOGGED-IN AS A PARENT!
 </div>
 <html lang="en">
     <head>
@@ -73,7 +72,7 @@
             margin: 0 auto;
         }
         
-        /* Some custom styles to beautify this example */
+    
         .row{
             background: #dbdfe5;
         }
@@ -94,6 +93,3 @@
     </body>
     </html>
   
-
-
-
