@@ -5,13 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { AchievementsComponent } from './modulse/parent/components/achievements/achievements.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    AchievementsComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
