@@ -1,0 +1,99 @@
+
+ <div class="d-flex student">
+    <ul
+      class="nav-pills h-100"
+      ngbNav
+      [(activeId)]="activeId"
+      
+    >
+      <li
+        *ngFor="let tab of tabList"
+        [ngbNavItem]="tab.type"
+        class="{{ getActive(tab.type) }}"
+      >
+        <a ngbNavLink class="h-100 d-flex Student">
+         
+        </a>
+        <ng-template ngbNavContent>
+          <!-- TAB CONTENT HERE -->
+          <app-achievements *ngIf="this.activeId === this.studentTabTypes.ACHIEVEMENT">
+          </app-achievements>
+
+          <app-marks
+            *ngIf="this.activeId === this.studentTabTypes.MARK"
+          >
+          </app-marks>
+
+          <app-my-attendance
+            *ngIf="this.activeId === this.studentTabTypes.ATTENDANCE"
+          >
+          </app-my-attendance>
+
+          <app-my-profile
+            *ngIf="this.activeId === this.studentTabTypes.MYPROFILE"
+          >
+          </app-my-profile>
+        </ng-template>
+      </li>
+    </ul>
+  </div>
+
+  <div class="settings-content">
+    <router-outlet></router-outlet>
+  </div>
+
+  <header>
+    student
+</header>
+<img src="C:\Users\Indumini Kavinda\Documents\projects\Student-Management\src\assets" class="rounded float-right">
+<div class="text-center">
+<button type="button" class="btn btn-primary">My Profile</button>
+<button type="button" class="btn btn-secondary">My Attendance</button>
+<button type="button" class="btn btn-success">Marks</button>
+<button type="button" class="btn btn-danger">Achievements</button>
+<button type="button" class="btn btn-warning">Prize Giving</button>
+
+</div>
+<div class="text-center">
+    LOGGED-IN AS A STUDENT!
+</div>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Center Align Buttons in Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+        /* Style to center grid column */
+        .col-centered{
+            float: none;
+            margin: 0 auto;
+        }
+        
+        /* Some custom styles to beautify this example */
+        .row{
+            background: #dbdfe5;
+        }
+        .demo-content{
+            padding: 25px;
+            font-size: 18px;
+            background: #abb1b8;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container my-3 bg-light">
+            <div class="col-md-12 text-center">
+              
+    
+            </div>
+        </div>
+    </body>
+    </html>
+  
+
+
+
